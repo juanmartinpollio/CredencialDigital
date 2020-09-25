@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tarifas</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card (click)="expandItem(item)" *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-subtitle>{{item.lugar}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <app-accordion-list [expanded]="item.expanded">
+        <ion-list>
+          <ion-item *ngFor="let item2 of item.categorias">
+            <ion-label>
+              <p>{{item2.nombre}}</p>
+              <h4>Desayuno: S/C</h4>
+              <h4>Media pensión: $540</h4>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </app-accordion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

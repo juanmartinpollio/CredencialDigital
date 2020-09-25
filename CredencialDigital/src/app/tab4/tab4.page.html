@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Noticias</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card (click)="expandItem(item)" *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-subtitle>{{item.titulo}}
+        <br>
+        <br>
+        {{item.ResumenNoticia}}
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <app-accordion-list [expanded]="item.expanded">
+                <ion-button
+                class="colorPrincipalBoton"
+                href= {{item.LinkNoticia}}
+                expand="block"
+                >Mas Info</ion-button>
+      </app-accordion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,68 @@
+
+<ion-content>
+
+  <div class="container">
+
+    <div class="header">
+      <div class="title">
+        <img src="assets/iconSPYGPAMini.png"/>
+      </div>
+      <h4>SPYGPA - Registro</h4>
+    </div>
+
+    <div class="body">
+      <ion-list>
+        <ion-item>
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-input placeholder="Nombre" type="text" [(ngModel)]='usuario.nombre' name="nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon slot="start" name="person-add-outline"></ion-icon>
+          <ion-input [(ngModel)]='usuario.apellido' type="text" name="apellido" placeholder="Apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon slot="start" name="card-outline"></ion-icon>
+          <ion-input [(ngModel)]='usuario.dni'  type="number" name="dni" placeholder="DNI"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon slot="start" name="at"></ion-icon>
+          <ion-input [(ngModel)]='usuario.email' type="email" name="email" placeholder="Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>   
+          <ion-input [(ngModel)]='usuario.contra'  type="text" name="contra" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+          <ion-input [(ngModel)]='usuario.contraplus'  type="text" name="contraplus" placeholder="Confirmar Contraseña"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Fecha<br>Nac.</ion-label>
+          <ion-icon slot="start"  name="calendar-outline"></ion-icon>
+          <ion-input [(ngModel)]='usuario.date' type="date" name ="date"></ion-input>
+        </ion-item>
+        
+      </ion-list>
+    </div>
+    <div class="header">
+      <ion-button
+      type="submit"
+      color="success"
+      (click)="prueba()"
+      >Registrarse</ion-button>
+      <br>
+      <ion-button
+      type="submit"
+      class="colorPrincipalBoton"
+      (click)="volverAlInicio()"
+      >Volver al inicio</ion-button>  
+      <br>
+    </div>
+  </div>
+</ion-content>
